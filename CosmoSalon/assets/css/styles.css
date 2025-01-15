@@ -74,14 +74,16 @@
   margin: 20px;
   padding: 20px;
 }
-
 .background-div1,
 .background-div2,
 .background-div3,
 .background-div4,
-.background-div5 {
-  margin: 20px;
-  padding: 20px;
+.background-div5,
+.background-div6,
+.background-div7,
+.background-div8,
+.background-div9 {
+  margin: 10px;
   background-image: url("../images/SkinCare.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -96,15 +98,6 @@
   opacity: 0.6;
 }
 
-.background-div1:hover,
-.background-div2:hover,
-.background-div3:hover,
-.background-div4:hover,
-.background-div5:hover {
-  opacity: 1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-}
-
 .background-div2 {
   background-image: url("../images/Hair.jpg");
 }
@@ -116,4 +109,29 @@
 }
 .background-div5 {
   background-image: url("../images/Spa.jpg");
+}
+.background-div6 {
+  background-image: url("../images/MenSkinCare.jpg");
+}
+.background-div7 {
+  background-image: url("../images/MenHair.jpg");
+}
+.background-div8 {
+  background-image: url("../images/MenMakeup.jpg");
+}
+.background-div9 {
+  background-image: url("../images/MenPhotography.jpg");
+}
+
+.background-div1:hover,
+.background-div2:hover,
+.background-div3:hover,
+.background-div4:hover,
+.background-div5:hover,
+.background-div6:hover,
+.background-div7:hover,
+.background-div8:hover,
+.background-div9:hover {
+  opacity: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
