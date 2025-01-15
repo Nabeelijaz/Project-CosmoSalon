@@ -36,25 +36,13 @@
 }
 
 .header .imgslider {
-  background-image: url("");
-  height: 440px;
+  background-image: url("https://t4.ftcdn.net/jpg/06/13/51/75/360_F_613517595_vN9ugH0PW0vnPTzINEX1Eqnqt1EAlB0c.jpg");
+  height: 450px;
   width: 100%;
-  animation: changeimg 20s infinite linear;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
-}
-
-@keyframes changeimg {
-  0% {
-    background-image: url("");
-  }
-  50% {
-    background-image: url("");
-  }
-  100% {
-    background-image: url("");
-  }
 }
 
 .arrow {
@@ -80,4 +68,52 @@
 .right {
   right: 10px;
   transform: translateY(-50%);
+}
+
+.main {
+  margin: 20px;
+  padding: 20px;
+}
+
+.background-div1,
+.background-div2,
+.background-div3,
+.background-div4,
+.background-div5 {
+  margin: 20px;
+  padding: 20px;
+  background-image: url("../images/SkinCare.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  border-radius: 10px;
+  font-family: "Volkhov", Sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  opacity: 0.6;
+}
+
+.background-div1:hover,
+.background-div2:hover,
+.background-div3:hover,
+.background-div4:hover,
+.background-div5:hover {
+  opacity: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.background-div2 {
+  background-image: url("../images/Hair.jpg");
+}
+.background-div3 {
+  background-image: url("../images/Makeup.jpg");
+}
+.background-div4 {
+  background-image: url("../images/Photography.jpg");
+}
+.background-div5 {
+  background-image: url("../images/Spa.jpg");
 }
