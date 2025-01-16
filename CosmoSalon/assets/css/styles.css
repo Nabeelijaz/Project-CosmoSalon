@@ -16,17 +16,24 @@
 .logo img {
   width: 100%;
   height: 100%;
+  left: 50px;
 }
 
 .menu-icon {
   display: flex;
   align-items: center;
   gap: 15px;
+  right: 50px;
 }
 
 .menu-icon i {
   font-size: 22px;
   color: #fff;
+  cursor: pointer;
+}
+
+.menu-icon i:nth-of-type(2) {
+  color: #f4b838;
 }
 
 .header {
@@ -36,8 +43,8 @@
 }
 
 .header .imgslider {
-  background-image: url("https://t4.ftcdn.net/jpg/06/13/51/75/360_F_613517595_vN9ugH0PW0vnPTzINEX1Eqnqt1EAlB0c.jpg");
-  height: 450px;
+  background-image: url("https://cosmosalon.pk/wp-content/uploads/2023/05/gome-page-1.jpg");
+  height: 654px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
