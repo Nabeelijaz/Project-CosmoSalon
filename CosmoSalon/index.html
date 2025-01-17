@@ -28,7 +28,7 @@
       </div>
       <div class="menu-icon">
         <i class="bi bi-border-width"></i>
-        <i class="bi bi-calendar-week-fill"></i>
+        <i class="bi bi-calendar-week-fill" id="appointmentPopup"></i>
       </div>
     </nav>
 
@@ -37,10 +37,15 @@
       <div class="imgslider"></div>
       <i class="arrow right bi bi-chevron-right"></i>
     </header>
+    <!-- Appointment Popup -->
+    <div id="appointmentPopupOpen">Popup</div>
+    <div id="appointmentPopupClose">Close</div>
 
     <main>
       <section class="container">
-        <h2 class="col-12 text-center mb-4 mt-4">Women Services</h2>
+        <h2 class="col-12 text-center fs-21 fw-bold mb-4 mt-4">
+          Women Services
+        </h2>
         <div class="row justify-content-center mb-4">
           <div class="background-div1 col-lg-2">
             <h5 class="card-title">
@@ -77,7 +82,7 @@
           </div>
         </div>
 
-        <h2 class="col-12 text-center mb-4">Men Services</h2>
+        <h2 class="col-12 text-center fs-21 fw-bold mb-4">Men Services</h2>
         <div class="row justify-content-center">
           <div class="background-div8 col-lg-3">
             <h5 class="card-title">
@@ -109,6 +114,7 @@
         </div>
       </section>
       <section class="mt-4 bg-dark">
+        <br />
         <h2 class="col-12 p-3 fs-21 fw-bold text-center text-white">
           News And Articles
         </h2>
@@ -250,6 +256,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/popup.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
