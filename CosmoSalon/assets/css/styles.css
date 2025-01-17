@@ -1,10 +1,11 @@
 :root {
   --primary-color: #000000;
-  --secondary-color: #fff;
-  --main-color: #f4b838;
-  --background-color: #fff;
+  --secondary-color: #ffffff;
+  --main-color: rgb(244, 56, 203);
+  --background-color: #f4f4f4;
   --box-shadow-color: rgba(0, 0, 0, 0.6);
   --progress-color: #bec3c7;
+  --dark-color: rgba(0, 0, 0, 0.9);
 }
 
 * {
@@ -22,10 +23,16 @@
   padding: 20px;
 }
 
-.logo img {
+/* .logo img {
   width: 100%;
   height: 100%;
   left: 50px;
+} */
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--main-color);
 }
 
 .menu-icon {
@@ -176,6 +183,14 @@ label {
 
 a {
   text-decoration: none;
+}
+
+.footer {
+  background-color: var(--dark-color);
+}
+
+.News {
+  background-color: var(--dark-color);
 }
 /* a:hover {
   text-decoration: underline;
