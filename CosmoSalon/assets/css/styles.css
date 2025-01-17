@@ -1,11 +1,12 @@
 :root {
   --primary-color: #000000;
   --secondary-color: #ffffff;
-  --main-color: rgb(244, 56, 203);
+  --main-color: #f8768b;
   --background-color: #f4f4f4;
   --box-shadow-color: rgba(0, 0, 0, 0.6);
   --progress-color: #bec3c7;
   --dark-color: rgba(0, 0, 0, 0.9);
+  --heading-color: #fe0058;
 }
 
 * {
@@ -14,12 +15,17 @@
   box-sizing: border-box;
 }
 
+h2 {
+  color: var(--heading-color);
+  font: 37px sans-serif;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   padding: 20px;
 }
 
@@ -48,6 +54,9 @@
   cursor: pointer;
 }
 
+.menu-icon i:nth-of-type(1) {
+  color: #000000;
+}
 .menu-icon i:nth-of-type(2) {
   color: var(--main-color);
 }
@@ -59,8 +68,8 @@
 }
 
 .header .imgslider {
-  background-image: url("https://cosmosalon.pk/wp-content/uploads/2023/05/gome-page-1.jpg");
-  height: 654px;
+  background-image: url("../images/image.png");
+  height: 450px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -167,6 +176,7 @@
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  border: 1px solid var(--main-color);
   z-index: 1000;
 }
 #appointmentPopupClose {
