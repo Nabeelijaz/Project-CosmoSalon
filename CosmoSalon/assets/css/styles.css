@@ -184,6 +184,8 @@ footer {
 
 footer ul li a {
   color: #fff;
+  font-size: 18px;
+  padding: 4px;
 }
 footer p:hover {
   color: #f4b838;
