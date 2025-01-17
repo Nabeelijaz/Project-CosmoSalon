@@ -155,4 +155,12 @@
 }
 #appointmentPopupClose {
   cursor: pointer;
+  font: 2em sans-serif;
+  color: #f4b838;
+  float: right;
+}
+
+label {
+  color: #f4b838;
+  font-weight: bold;
 }

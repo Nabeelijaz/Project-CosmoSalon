@@ -44,23 +44,20 @@
         <h2>Book your appointment now</h2>
       </div>
       <div class="progress mb-4 gap-1">
-        <div class="progress-bar" style="width: 16.6%; background: #f4b838">
+        <div class="progress-bar" style="width: 20%; background: #f4b838">
           1. Services
         </div>
-        <div class="progress-bar" style="width: 16.6%; background: #bec3c7">
-          2. Time Slot
+        <div class="progress-bar" style="width: 20%; background: #bec3c7">
+          2. Cart
         </div>
-        <div class="progress-bar" style="width: 16.6%; background: #bec3c7">
-          3. Cart
+        <div class="progress-bar" style="width: 20%; background: #bec3c7">
+          3. Personal Details
         </div>
-        <div class="progress-bar" style="width: 16.6%; background: #bec3c7">
-          4. Personal Details
+        <div class="progress-bar" style="width: 20%; background: #bec3c7">
+          4. Payment
         </div>
-        <div class="progress-bar" style="width: 16.6%; background: #bec3c7">
-          5. Payment
-        </div>
-        <div class="progress-bar" style="width: 16.6%; background: #bec3c7">
-          6. Done
+        <div class="progress-bar" style="width: 20%; background: #bec3c7">
+          5. Done
         </div>
       </div>
       <h6>Please select service:</h6>
@@ -69,7 +66,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="location">Location</label>
-              <select class="form-control" id="location">
+              <select class="form-control mt-2" id="location">
                 <option value="0">Select location</option>
                 <option value="1">Cosmo Salon MM Alam</option>
                 <option value="2">Cosmo Salon PIA</option>
@@ -81,7 +78,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="gender">Gender</label>
-              <select class="form-control" id="gender">
+              <select class="form-control mt-2" id="gender">
                 <option value="0">Select gender</option>
                 <option value="1">Men</option>
                 <option value="2">Women</option>
@@ -92,7 +89,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="service">Service</label>
-              <select class="form-control" id="service">
+              <select class="form-control mt-2" id="service">
                 <option value="0">Select service</option>
                 <option value="1">Haircut</option>
                 <option value="2">Hair Coloring</option>
@@ -105,7 +102,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="staff">Staff</label>
-              <select class="form-control" id="staff">
+              <select class="form-control mt-2" id="staff">
                 <option value="0">Any</option>
                 <option value="3">Faraz</option>
                 <option value="4">Ziyafat</option>
@@ -124,20 +121,23 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="available-date">I'm available on or after</label>
-              <input type="date" class="form-control" id="available-date" />
+              <input
+                type="date"
+                class="form-control mt-2"
+                id="available-date"
+              />
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label>Available Days</label>
-              <div class="d-flex flex-wrap">
+              <div class="d-flex flex-wrap mt-2">
                 <div class="form-check me-3">
                   <input
                     class="form-check-input"
                     type="checkbox"
                     value="2"
                     id="monday"
-                    checked
                   />
                   <label class="form-check-label" for="monday">Mon</label>
                 </div>
@@ -147,7 +147,6 @@
                     type="checkbox"
                     value="3"
                     id="tuesday"
-                    checked
                   />
                   <label class="form-check-label" for="tuesday">Tue</label>
                 </div>
@@ -157,7 +156,6 @@
                     type="checkbox"
                     value="4"
                     id="wednesday"
-                    checked
                   />
                   <label class="form-check-label" for="wednesday">Wed</label>
                 </div>
@@ -167,7 +165,6 @@
                     type="checkbox"
                     value="5"
                     id="thursday"
-                    checked
                   />
                   <label class="form-check-label" for="thursday">Thu</label>
                 </div>
@@ -177,20 +174,36 @@
                     type="checkbox"
                     value="6"
                     id="friday"
-                    checked
                   />
                   <label class="form-check-label" for="friday">Fri</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="7"
+                    id="saturday"
+                  />
+                  <label class="form-check-label" for="saturday">Sat</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="1"
+                    id="sunday"
+                  />
+                  <label class="form-check-label" for="sunday">Sun</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <br />
         <div class="row">
           <div class="col-md-3">
             <div class="form-group">
               <label for="start-time">Start from</label>
-              <select class="form-control" id="start-time">
+              <select class="form-control mt-2" id="start-time">
                 <option value="08:00" selected>1:00 pm</option>
                 <option value="09:00">2:00 pm</option>
                 <option value="10:00">3:00 pm</option>
@@ -202,7 +215,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="end-time">Finish by</label>
-              <select class="form-control" id="end-time">
+              <select class="form-control mt-2" id="end-time">
                 <option value="08:00">1:00 pm</option>
                 <option value="09:00">2:00 pm</option>
                 <option value="10:00">3:00 pm</option>
@@ -214,7 +227,20 @@
         </div>
         <br />
         <hr />
-        <button type="submit" class="btn btn-primary">Next</button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="
+            float: right;
+            background-color: #f4b838;
+            color: #fff;
+            border: transparent;
+            width: 100px;
+            font-weight: bold;
+          "
+        >
+          Next
+        </button>
       </form>
     </div>
 
