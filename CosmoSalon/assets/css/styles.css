@@ -5,7 +5,7 @@
   --background-color: #f4f4f4;
   --box-shadow-color: rgba(0, 0, 0, 0.6);
   --progress-color: #bec3c7;
-  --dark-color: rgba(0, 0, 0, 0.9);
+  --dark-color: rgba(0, 0, 0, 0.69);
   --heading-color: #fe0058;
 }
 
@@ -195,10 +195,6 @@ a {
   text-decoration: none;
 }
 
-.footer {
-  background-color: var(--dark-color);
-}
-
 .News {
   background-color: var(--dark-color);
 }
@@ -217,7 +213,7 @@ footer {
 }
 
 footer ul li a {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 18px;
   padding: 4px;
 }
