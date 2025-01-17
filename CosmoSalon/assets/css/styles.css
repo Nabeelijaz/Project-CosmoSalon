@@ -243,3 +243,24 @@ footer ul li a:hover {
 .isactive {
   background-color: var(--main-color);
 }
+
+@media (min-width: 1200px) {
+  .background-div6,
+  .background-div7,
+  .background-div8,
+  .background-div9 {
+    width: 21%;
+  }
+
+  .background-div1:hover,
+  .background-div2:hover,
+  .background-div3:hover,
+  .background-div4:hover,
+  .background-div5:hover,
+  .background-div6:hover,
+  .background-div7:hover,
+  .background-div8:hover,
+  .background-div9:hover {
+    width: 23%;
+  }
+}
