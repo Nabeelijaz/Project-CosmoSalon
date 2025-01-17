@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #fff;
+  --main-color: #f4b838;
+  --background-color: #fff;
+  --box-shadow-color: rgba(0, 0, 0, 0.6);
+  --progress-color: #bec3c7;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +17,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   padding: 20px;
 }
 
@@ -28,16 +37,16 @@
 
 .menu-icon i {
   font-size: 22px;
-  color: #fff;
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
 .menu-icon i:nth-of-type(2) {
-  color: #f4b838;
+  color: var(--main-color);
 }
 
 .header {
-  background-color: black; // for test arrow
+  background-color: var(--primary-color); // for test arrow
   align-items: center;
   justify-content: center;
 }
@@ -64,7 +73,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--secondary-color);
   font-weight: bold;
 }
 
@@ -139,7 +148,7 @@
 .background-div8:hover,
 .background-div9:hover {
   opacity: 1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 8px var(--box-shadow-color);
 }
 #appointmentPopup {
   display: none;
@@ -147,7 +156,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: var(--background-color);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -156,12 +165,12 @@
 #appointmentPopupClose {
   cursor: pointer;
   font: 2em sans-serif;
-  color: #f4b838;
+  color: var(--main-color);
   float: right;
 }
 
 label {
-  color: #f4b838;
+  color: var(--main-color);
   font-weight: bold;
 }
 
@@ -170,10 +179,10 @@ a {
 }
 /* a:hover {
   text-decoration: underline;
-  color: #f4b838;
+  color: var(--main-color);
 } */
 .footer-main-text {
-  color: #f4b838;
+  color: var(--main-color);
   font-size: 20px;
   font-weight: bold;
 }
@@ -183,13 +192,29 @@ footer {
 }
 
 footer ul li a {
-  color: #fff;
+  color: var(--secondary-color);
   font-size: 18px;
   padding: 4px;
 }
 footer p:hover {
-  color: #f4b838;
+  color: var(--main-color);
 }
 footer ul li a:hover {
-  color: #f4b838;
+  color: var(--main-color);
+}
+.btn-next {
+  float: right;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  border: transparent;
+  width: 100px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 20%;
+  background-color: var(--progress-color);
+}
+.isactive {
+  background-color: var(--main-color);
 }
