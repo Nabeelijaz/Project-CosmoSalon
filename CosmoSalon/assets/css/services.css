@@ -1,0 +1,14 @@
+.col-lg-6 ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 800px;
+}
+
+.col-lg-6 ul li img {
+  margin-right: 10px;
+}
+
+.col-lg-6 ul li span {
+  margin-left: auto;
+}
