@@ -39,6 +39,7 @@ h2 {
   font-size: 30px;
   font-weight: bold;
   color: var(--main-color);
+  cursor: pointer;
 }
 
 .menu-icon {
