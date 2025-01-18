@@ -12,3 +12,23 @@
 .col-lg-6 ul li span {
   margin-left: auto;
 }
+
+.header .imgslidermen {
+  background-image: url("https://i.ibb.co/KF072S0/wmremove-transformed-1.jpg");
+  height: 450px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.header .imgsliderwomen {
+  background-image: url("https://i.ibb.co/vPRcCgT/womenservices.jpg");
+  height: 450px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
