@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Products - COSMO® Beauty Salon</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div>
+        <!-- <a href="./index.html">
+          <img src="./assets/images/logo.png" alt="Cosmo Salon Logo" />
+        </a> -->
+        <a href="index.html"><h1 class="logo">COSMO SALON</h1></a>
+      </div>
+      <div class="menu-icon">
+        <i class="bi bi-border-width" id="sidebarOpen"></i>
+        <i class="bi bi-calendar-week-fill" id="appointmentPopupOpen"></i>
+      </div>
+    </nav>
+
+    <header class="header">
+      <i class="arrow left bi bi-chevron-left"></i>
+      <div class="imgslider"></div>
+      <i class="arrow right bi bi-chevron-right"></i>
+    </header>
+    <!-- Appointment Popup -->
+    <div id="appointmentPopup">
+      <i class="bi bi-x" id="appointmentPopupClose"></i>
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Book your appointment now</h2>
+      </div>
+      <div class="progress mb-4 gap-1">
+        <div class="progress-bar isactive">1. Services</div>
+        <div class="progress-bar">2. Cart</div>
+        <div class="progress-bar">3. Personal Details</div>
+        <div class="progress-bar">4. Payment</div>
+        <div class="progress-bar">5. Done</div>
+      </div>
+      <h6>Please select service:</h6>
+      <form>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="location">Location</label>
+              <select class="form-control mt-2" id="location">
+                <option value="0">Select location</option>
+                <option value="1">Cosmo Salon MM Alam</option>
+                <option value="2">Cosmo Salon PIA</option>
+                <option value="3">Cosmo Salon Iqbal Town</option>
+                <option value="4">Cosmo Salon Dha Phase 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select class="form-control mt-2" id="gender">
+                <option value="0">Select gender</option>
+                <option value="1">Men</option>
+                <option value="2">Women</option>
+                <option value="-1">Uncategorized</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select class="form-control mt-2" id="service">
+                <option value="0">Select service</option>
+                <option value="1">Haircut</option>
+                <option value="2">Hair Coloring</option>
+                <option value="3">Manicure</option>
+                <option value="4">Pedicure</option>
+                <option value="5">Facial</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="staff">Staff</label>
+              <select class="form-control mt-2" id="staff">
+                <option value="0">Any</option>
+                <option value="3">Faraz</option>
+                <option value="4">Ziyafat</option>
+                <option value="5">Shahbaz</option>
+                <option value="6">Suneel</option>
+                <option value="7">John</option>
+                <option value="8">Suraj</option>
+                <option value="9">Jonty</option>
+                <option value="10">Ali</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="available-date">I'm available on or after</label>
+              <input
+                type="date"
+                class="form-control mt-2"
+                id="available-date"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Available Days</label>
+              <div class="d-flex flex-wrap mt-2">
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="2"
+                    id="monday"
+                  />
+                  <label class="form-check-label" for="monday">Mon</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="3"
+                    id="tuesday"
+                  />
+                  <label class="form-check-label" for="tuesday">Tue</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="4"
+                    id="wednesday"
+                  />
+                  <label class="form-check-label" for="wednesday">Wed</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="5"
+                    id="thursday"
+                  />
+                  <label class="form-check-label" for="thursday">Thu</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="6"
+                    id="friday"
+                  />
+                  <label class="form-check-label" for="friday">Fri</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="7"
+                    id="saturday"
+                  />
+                  <label class="form-check-label" for="saturday">Sat</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="1"
+                    id="sunday"
+                  />
+                  <label class="form-check-label" for="sunday">Sun</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="start-time">Start from</label>
+              <select class="form-control mt-2" id="start-time">
+                <option value="08:00" selected>1:00 pm</option>
+                <option value="09:00">2:00 pm</option>
+                <option value="10:00">3:00 pm</option>
+                <option value="11:00">4:00 pm</option>
+                <option value="12:00">5:00 pm</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="end-time">Finish by</label>
+              <select class="form-control mt-2" id="end-time">
+                <option value="08:00">1:00 pm</option>
+                <option value="09:00">2:00 pm</option>
+                <option value="10:00">3:00 pm</option>
+                <option value="11:00">4:00 pm</option>
+                <option value="18:00" selected>11:00 pm</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <button type="submit" class="btn btn-next">
+          Next
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+
+    <main>
+      <section class="container mt-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="fw-bold px-5">Cosmo Salon</h2>
+
+            <p class="px-5" style="font-size: 20px; padding-bottom: 20px">
+              We believe that perfect beauty is different for every individual
+              and that achieving it need not be a daily struggle. That’s why we
+              never mass produce but always tailor the look: Considering the
+              individual’s unique features and needs when conceiving their
+              grooming solutions. We have created a salon that offers the
+              highest quality hair services, The Best Skin Care facials and
+              customized deals in market and Trendy Makeup and styling in a
+              setting that is healthier for the environment, our guests and our
+              staff. We carry high quality professional hair products designed
+              to ensure our guests look their best, both in the salon and at
+              home. The hair care products we carry have been carefully chosen
+              based both on performance and eco-sensitivity. Come see what you
+              and your hair can do for the Earth. Cosmo Salon has the best skin
+              care services in the market specially our customized deals which
+              are planned according to client’s demand. Our facials are
+              recommended to clients by experts, after skin test and analysis
+              which vary individual to individual, For better results and
+              customer care and Satisfaction. As we are really concerned about
+              your looks and beauty, Cosmo Salon is a right place for your
+              event’s makeover. Our trained makeup artists offer glamorous and
+              trendy looks for your events. So, you can be in limelight.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <img
+              src="https://cosmosalon.pk/wp-content/uploads/2023/05/640-x-960-Our-Projects.jpg"
+              alt=""
+              width="100%"
+            />
+          </div>
+        </div>
+
+        <br />
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              src="https://cosmosalon.pk/wp-content/uploads/2023/05/640-x-960-Our-Projects.jpg"
+              alt=""
+              width="100%"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bold px-5">Our Projects</h2>
+
+            <p class="px-5" style="font-size: 18px; padding-bottom: 20px">
+              Cosmo Salon, along with its associated Cosmo Academy of Hair and
+              Cosmetology by Aadi Rana, offers various services and courses
+              related to the beauty and fashion industry. Here’s a breakdown of
+              the information provided:
+            </p>
+            <p class="px-5" style="font-size: 18px; padding-bottom: 20px">
+              Cosmo Films: Cosmo Salon presents Cosmo Films, a service that aims
+              to freeze and capture valuable moments for customers. They
+              specialize in wedding, commercial, product, and portfolio
+              photography and videography. Their style focuses on photography
+              and fashion filmmaking, aiming to capture moments and candid shots
+              with natural or artificially created lighting, ensuring a high
+              level of perfection. Cosmo Academy of Hair and Cosmetology by Aadi
+              Rana: Cosmo Salon has launched the Cosmo Academy of Hair and
+              Cosmetology by Aadi Rana. This academy aims to provide a platform
+              for individuals to enhance their capabilities in the field of
+              cosmetology and become expert stylists through advanced
+              international-level training. The academy’s curriculum is designed
+              to prepare students for the international beauty industry. The
+              training programs incorporate technical, personal, and business
+              skills necessary to succeed in the hair and beauty industry.
+            </p>
+            <p class="px-5" style="font-size: 18px; padding-bottom: 20px">
+              Hair sculpting and design: This course focuses on teaching the art
+              of sculpting and designing hair, providing students with the
+              necessary skills and techniques to create various hairstyles and
+              designs.
+            </p>
+          </div>
+        </div>
+      </section>
+      <hr />
+    </main>
+
+    <footer class="footer text-dark py-4 mt-4">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-3">
+            <h5 class="footer-main-text">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="women-deals.html">Women Deals</a></li>
+              <li><a href="men-deals.html">Men Deals</a></li>
+              <li><a href="service-women.html">Services for Women</a></li>
+              <li><a href="service-men.html">Services for Men</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="footer-main-text">Contact</h5>
+
+            <p>Defence J Block , Lahore</p>
+            <hr />
+            <p>Johar Town PIA Road, Lahore</p>
+            <hr />
+            <p>28 – B, Block, C/II MM Alam Rd, Gulberg III, Lahore</p>
+            <hr />
+            <p>Defence Y Block , Lahore</p>
+            <hr />
+            <p>Phone: 03047662828</p>
+          </div>
+          <div class="col-md-3">
+            <h5 class="footer-main-text">Follow Us</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">TikTok</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.8768465162775!2d74.2788451!3d31.4450572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919016d1849a99f%3A0x475fb7b5e9b2342d!2sCOSMO%20SALON!5e0!3m2!1sen!2s!4v1737038976512!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center mt-3">
+          <a href="#" style="color: #000">© 2024 Cosmo Salon</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/popup.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
