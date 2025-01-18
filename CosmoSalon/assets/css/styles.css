@@ -229,6 +229,11 @@ footer ul li a:hover {
   color: var(--secondary-color);
   border: transparent;
   width: 100px;
+}
+
+.btn-next:hover {
+  background-color: var(--heading-color);
+  color: var(--secondary-color);
   font-weight: bold;
 }
 
@@ -237,7 +242,7 @@ footer ul li a:hover {
   background-color: var(--progress-color);
 }
 .isactive {
-  background-color: var(--main-color);
+  background-color: var(--heading-color);
 }
 
 @media (min-width: 1200px) {
