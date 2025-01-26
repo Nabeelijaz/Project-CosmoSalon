@@ -29,39 +29,60 @@ changeBackground(currentIndex);
 
 // ---------- FormData ----------
 
-document.querySelector("form").addEventListener("submit", function (event) {
-  event.preventDefault();
-  let isValid = true;
+document
+  .getElementById("nextStepButton")
+  .addEventListener("click", function () {
+    let isValid = true;
 
-  const location = document.getElementById("location").value;
-  const gender = document.getElementById("gender").value;
-  const service = document.getElementById("service").value;
-  const availableDate = document.getElementById("available-date").value;
-  const startTime = document.getElementById("start-time").value;
-  const endTime = document.getElementById("end-time").value;
+    const errorMessages = document.querySelectorAll(".error-message");
+    errorMessages.forEach((el) => (el.style.display = "none"));
 
-  if (location == "0") {
-    isValid = false;
-    alert("Please select a location.");
-  }
-  if (gender == "0") {
-    isValid = false;
-    alert("Please select a gender.");
-  }
-  if (service == "0") {
-    isValid = false;
-    alert("Please select a service.");
-  }
-  if (availableDate == "") {
-    isValid = false;
-    alert("Please select an available date.");
-  }
-  if (startTime == "" || endTime == "") {
-    isValid = false;
-    alert("Please select valid start and end times.");
-  }
+    const location = document.getElementById("location");
+    if (location.value === "0") {
+      document.getElementById("location-error").style.display = "block";
+      isValid = false;
+    }
 
-  if (isValid) {
-    alert("Form is valid. Proceeding to the next step.");
-  }
-});
+    const gender = document.getElementById("gender");
+    if (gender.value === "0") {
+      document.getElementById("gender-error").style.display = "block";
+      isValid = false;
+    }
+
+    const service = document.getElementById("service");
+    if (service.value === "0") {
+      document.getElementById("service-error").style.display = "block";
+      isValid = false;
+    }
+
+    const staff = document.getElementById("staff");
+    if (staff.value === "0") {
+      document.getElementById("staff-error").style.display = "block";
+      isValid = false;
+    }
+
+    const availableDate = document.getElementById("available-date");
+    if (!availableDate.value) {
+      document.getElementById("available-date-error").style.display = "block";
+      isValid = false;
+    }
+
+    const startTime = document.getElementById("start-time");
+    if (!startTime.value) {
+      document.getElementById("start-time-error").style.display = "block";
+      isValid = false;
+    }
+
+    const endTime = document.getElementById("end-time");
+    if (!endTime.value) {
+      document.getElementById("end-time-error").style.display = "block";
+      isValid = false;
+    }
+
+    if (isValid) {
+      document.getElementById("formStep1").innerHTML = `  `;
+
+      document.getElementById("progress-1").classList.remove("isactive");
+      document.getElementById("progress-2").classList.add("isactive");
+    }
+  });
