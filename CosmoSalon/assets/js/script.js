@@ -80,7 +80,85 @@ document
     }
 
     if (isValid) {
-      document.getElementById("formStep1").innerHTML = `  `;
+      const formattedDate = new Date(availableDate.value).toLocaleDateString(
+        "en-US",
+        {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }
+      );
+      document.getElementById("formStep1").innerHTML = `
+        <div class="container mt-4">
+        Below you can find a list of services selected for booking.
+Click BOOK MORE if you want to add more services.
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Employee</th>
+                <th>Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>${service.options[service.selectedIndex].text}</td>
+                <td>${formattedDate}</td>
+                <td>${startTime.value} - ${endTime.value}</td>
+                <td>${staff.options[staff.selectedIndex].text}</td>
+                <td>Rs.250</td>
+                <td class="bookly-rtext bookly-nowrap bookly-js-actions">
+                  <button class="bookly-round" data-action="edit" title="Edit" data-style="zoom-in" data-spinner-size="30">
+                    <span class="ladda-label"><i class="bookly-icon-sm bookly-icon-edit"></i></span>
+                  </button>
+                  <button class="bookly-round" data-action="drop" title="Remove" data-style="zoom-in" data-spinner-size="30">
+                    <span class="ladda-label"><i class="bookly-icon-sm bookly-icon-drop"></i></span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Subtotal:</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong>Rs.250</strong></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><strong>Total:</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong>Rs.250</strong></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+           <div class="col-md-6">
+              <button type="button" id="bookMoreButton" class="btn btn-next">
+               Back<i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <button type="button" id="bookMoreButton" class="btn btn-next">
+                Book More <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            <div class="col-md-6 text-right">
+              <button type="button" id="nextStepButton" class="btn btn-next">
+                Next <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
 
       document.getElementById("progress-1").classList.remove("isactive");
       document.getElementById("progress-2").classList.add("isactive");
