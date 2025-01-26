@@ -90,7 +90,8 @@ document
       );
       document.getElementById("formStep1").innerHTML = `
       <div class="container mt-4">
-        <p>Below you can find a list of services selected for booking.<p></p> Click <strong>BOOK MORE</strong> if you want to add more services.</p>
+        <p>Below you can find a list of services selected for booking.<p>
+        </p> Click <strong>BOOK MORE</strong> if you want to add more services.</p>
         
         <table class="table table-bordered">
           <thead>
