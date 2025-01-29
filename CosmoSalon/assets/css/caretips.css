@@ -1,0 +1,56 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #d63384;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.content {
+    padding: 20px;
+}
+
+.tip {
+    background-color: white;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tip h2 {
+    color: #d63384;
+}
+
+.tip img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 15px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #d63384;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

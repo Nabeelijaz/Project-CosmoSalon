@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Women Deals - COSMO® Beauty Salon</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div>
+        <!-- <a href="./index.html">
+          <img src="./assets/images/logo.png" alt="Cosmo Salon Logo" />
+        </a> -->
+        <a href="index.html"><h1 class="logo">COSMO SALON</h1></a>
+      </div>
+      <div class="menu-icon">
+        <i class="bi bi-border-width" id="sidebarOpen"></i>
+        <i class="bi bi-calendar-week-fill" id="appointmentPopupOpen"></i>
+      </div>
+    </nav>
+
+    <header class="header">
+      <i class="arrow left bi bi-chevron-left"></i>
+      <div class="imgslider"></div>
+      <i class="arrow right bi bi-chevron-right"></i>
+    </header>
+    <!-- Appointment Popup -->
+    <div id="appointmentPopup">
+      <i class="bi bi-x" id="appointmentPopupClose"></i>
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Book your appointment now</h2>
+      </div>
+      <div class="progress mb-4 gap-1">
+        <div class="progress-bar isactive">1. Services</div>
+        <div class="progress-bar">2. Cart</div>
+        <div class="progress-bar">3. Personal Details</div>
+        <div class="progress-bar">4. Payment</div>
+        <div class="progress-bar">5. Done</div>
+      </div>
+      <h6>Please select service:</h6>
+      <form>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="location">Location</label>
+              <select class="form-control mt-2" id="location">
+                <option value="0">Select location</option>
+                <option value="1">Cosmo Salon MM Alam</option>
+                <option value="2">Cosmo Salon PIA</option>
+                <option value="3">Cosmo Salon Iqbal Town</option>
+                <option value="4">Cosmo Salon Dha Phase 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select class="form-control mt-2" id="gender">
+                <option value="0">Select gender</option>
+                <option value="1">Men</option>
+                <option value="2">Women</option>
+                <option value="-1">Uncategorized</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select class="form-control mt-2" id="service">
+                <option value="0">Select service</option>
+                <option value="1">Haircut</option>
+                <option value="2">Hair Coloring</option>
+                <option value="3">Manicure</option>
+                <option value="4">Pedicure</option>
+                <option value="5">Facial</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="staff">Staff</label>
+              <select class="form-control mt-2" id="staff">
+                <option value="0">Any</option>
+                <option value="3">Faraz</option>
+                <option value="4">Ziyafat</option>
+                <option value="5">Shahbaz</option>
+                <option value="6">Suneel</option>
+                <option value="7">John</option>
+                <option value="8">Suraj</option>
+                <option value="9">Jonty</option>
+                <option value="10">Ali</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="available-date">I'm available on or after</label>
+              <input
+                type="date"
+                class="form-control mt-2"
+                id="available-date"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Available Days</label>
+              <div class="d-flex flex-wrap mt-2">
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="2"
+                    id="monday"
+                  />
+                  <label class="form-check-label" for="monday">Mon</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="3"
+                    id="tuesday"
+                  />
+                  <label class="form-check-label" for="tuesday">Tue</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="4"
+                    id="wednesday"
+                  />
+                  <label class="form-check-label" for="wednesday">Wed</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="5"
+                    id="thursday"
+                  />
+                  <label class="form-check-label" for="thursday">Thu</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="6"
+                    id="friday"
+                  />
+                  <label class="form-check-label" for="friday">Fri</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="7"
+                    id="saturday"
+                  />
+                  <label class="form-check-label" for="saturday">Sat</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="1"
+                    id="sunday"
+                  />
+                  <label class="form-check-label" for="sunday">Sun</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="start-time">Start from</label>
+              <select class="form-control mt-2" id="start-time">
+                <option value="08:00" selected>1:00 pm</option>
+                <option value="09:00">2:00 pm</option>
+                <option value="10:00">3:00 pm</option>
+                <option value="11:00">4:00 pm</option>
+                <option value="12:00">5:00 pm</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="end-time">Finish by</label>
+              <select class="form-control mt-2" id="end-time">
+                <option value="08:00">1:00 pm</option>
+                <option value="09:00">2:00 pm</option>
+                <option value="10:00">3:00 pm</option>
+                <option value="11:00">4:00 pm</option>
+                <option value="18:00" selected>11:00 pm</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <button type="submit" class="btn btn-next">
+          Next
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+    <main>
+        <body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+            <div style="text-align: center; padding: 20px;  color: #fe0058;">
+              <h1><strong>Virtual Try-On</strong></h1>
+              <p>Try out different looks before your visit!</p>
+            </div>
+          
+            <div style="max-width: 900px; margin: 20px auto; padding: 20px; text-align: center; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+              <h2>Upload Your Photo</h2>
+              <p>Choose a photo to try out various hairstyles and makeup looks.</p>
+              <input type="file" accept="image/*" style="margin: 20px 0;">
+              <div>
+                <button style="background-color: #fe0058; color: white; border: none; padding: 10px 20px; font-size: 1rem; border-radius: 5px; cursor: pointer;">Upload and Try</button>
+              </div>
+              <div style="margin-top: 20px;">
+                <p>Explore popular looks:</p>
+                <img src="hairstyle1.jpg" alt="Hairstyle 1" style="width: 100px; height: auto; margin: 5px; border-radius: 10px;">
+                <img src="makeup1.jpg" alt="makeup 1" style="width: 100px; height: auto; margin: 5px; border-radius: 10px;">
+                <img src="hairstyle2.jpg" alt="Hairstyle 3" style="width: 100px; height: auto; margin: 5px; border-radius: 10px;">
+              </div>
+            </div>
+      <hr />
+    </main>
+    <footer class="footer text-dark py-4 mt-4">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-3">
+            <h5 class="footer-main-text">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="women-deals.html">Women Deals</a></li>
+              <li><a href="men-deals.html">Men Deals</a></li>
+              <li><a href="service-women.html">Services for Women</a></li>
+              <li><a href="service-men.html">Services for Men</a></li>
+              <li><a href="virtual try-on.html">Virtual try-on</a></li>
+              <li><a href="Loyalty Rewards.html">Loyalty Rewards</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="footer-main-text">Contact</h5>
+
+            <p>Defence J Block , Lahore</p>
+            <hr />
+            <p>Johar Town PIA Road, Lahore</p>
+            <hr />
+            <p>28 – B, Block, C/II MM Alam Rd, Gulberg III, Lahore</p>
+            <hr />
+            <p>Defence Y Block , Lahore</p>
+            <hr />
+            <p>Phone: 03047662828</p>
+          </div>
+          <div class="col-md-3">
+            <h5 class="footer-main-text">Follow Us</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">TikTok</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.8768465162775!2d74.2788451!3d31.4450572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919016d1849a99f%3A0x475fb7b5e9b2342d!2sCOSMO%20SALON!5e0!3m2!1sen!2s!4v1737038976512!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center mt-3">
+          <a href="#" style="color: #000">© 2024 Cosmo Salon</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/popup.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

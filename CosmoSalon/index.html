@@ -38,7 +38,6 @@
       <div class="imgslider"></div>
       <i class="arrow right bi bi-chevron-right"></i>
     </header>
-
     <!-- Appointment Popup -->
     <div id="appointmentPopup">
       <i class="bi bi-x" id="appointmentPopupClose"></i>
@@ -46,233 +45,183 @@
         <h2 class="fw-bold">Book your appointment now</h2>
       </div>
       <div class="progress mb-4 gap-1">
-        <div class="progress-bar isactive" id="progress-1">1. Services</div>
-        <div class="progress-bar" id="progress-2">2. Cart</div>
-        <div class="progress-bar" id="progress-3">3. Personal Details</div>
-        <div class="progress-bar" id="progress-4">4. Payment</div>
-        <div class="progress-bar" id="progress-5">5. Done</div>
+        <div class="progress-bar isactive">1. Services</div>
+        <div class="progress-bar">2. Cart</div>
+        <div class="progress-bar">3. Personal Details</div>
+        <div class="progress-bar">4. Payment</div>
+        <div class="progress-bar">5. Done</div>
       </div>
-      <form id="appointmentForm">
-        <div id="formStep1">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="form-group">
-                <label for="location">Location</label>
-                <select class="form-control mt-2" id="location" required>
-                  <option value="0">Select location</option>
-                  <option value="1">Cosmo Salon MM Alam</option>
-                  <option value="2">Cosmo Salon PIA</option>
-                  <option value="3">Cosmo Salon Iqbal Town</option>
-                  <option value="4">Cosmo Salon Dha Phase 3</option>
-                </select>
-                <div
-                  class="error-message"
-                  id="location-error"
-                  style="color: red; display: none"
-                >
-                  Please select a location
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                <label for="gender">Gender</label>
-                <select class="form-control mt-2" id="gender" required>
-                  <option value="0">Select gender</option>
-                  <option value="1">Men</option>
-                  <option value="2">Women</option>
-                  <option value="-1">Uncategorized</option>
-                </select>
-                <div
-                  class="error-message"
-                  id="gender-error"
-                  style="color: red; display: none"
-                >
-                  Please select a gender
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                <label for="service">Service</label>
-                <select class="form-control mt-2" id="service" required>
-                  <option value="0">Select service</option>
-                  <option value="1">Haircut</option>
-                  <option value="2">Hair Coloring</option>
-                  <option value="3">Manicure</option>
-                  <option value="4">Pedicure</option>
-                  <option value="5">Facial</option>
-                </select>
-                <div
-                  class="error-message"
-                  id="service-error"
-                  style="color: red; display: none"
-                >
-                  Please select a service
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                <label for="staff">Staff</label>
-                <select class="form-control mt-2" id="staff" required>
-                  <option value="0">Any</option>
-                  <option value="3">Faraz</option>
-                  <option value="4">Ziyafat</option>
-                  <option value="5">Shahbaz</option>
-                  <option value="6">Suneel</option>
-                  <option value="7">John</option>
-                  <option value="8">Suraj</option>
-                  <option value="9">Jonty</option>
-                  <option value="10">Ali</option>
-                </select>
-                <div
-                  class="error-message"
-                  id="staff-error"
-                  style="color: red; display: none"
-                >
-                  Please select an employee
-                </div>
-              </div>
+      <h6>Please select service:</h6>
+      <form>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="location">Location</label>
+              <select class="form-control mt-2" id="location">
+                <option value="0">Select location</option>
+                <option value="1">Cosmo Salon MM Alam</option>
+                <option value="2">Cosmo Salon PIA</option>
+                <option value="3">Cosmo Salon Iqbal Town</option>
+                <option value="4">Cosmo Salon Dha Phase 3</option>
+              </select>
             </div>
           </div>
-          <br />
-          <div class="row">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="available-date">I'm available on or after</label>
-                <input
-                  type="date"
-                  class="form-control mt-2"
-                  id="available-date"
-                  required
-                />
-                <div
-                  class="error-message"
-                  id="available-date-error"
-                  style="color: red; display: none"
-                >
-                  Please select a date
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Available Days</label>
-                <div class="d-flex flex-wrap mt-2">
-                  <div class="form-check me-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="2"
-                      id="monday"
-                    />
-                    <label class="form-check-label" for="monday">Mon</label>
-                  </div>
-                  <div class="form-check me-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="3"
-                      id="tuesday"
-                    />
-                    <label class="form-check-label" for="tuesday">Tue</label>
-                  </div>
-                  <div class="form-check me-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="4"
-                      id="wednesday"
-                    />
-                    <label class="form-check-label" for="wednesday">Wed</label>
-                  </div>
-                  <div class="form-check me-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="5"
-                      id="thursday"
-                    />
-                    <label class="form-check-label" for="thursday">Thu</label>
-                  </div>
-                  <div class="form-check me-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="6"
-                      id="friday"
-                    />
-                    <label class="form-check-label" for="friday">Fri</label>
-                  </div>
-                  <div class="form-check me-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="7"
-                      id="saturday"
-                    />
-                    <label class="form-check-label" for="saturday">Sat</label>
-                  </div>
-                  <div class="form-check me-3">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="1"
-                      id="sunday"
-                    />
-                    <label class="form-check-label" for="sunday">Sun</label>
-                  </div>
-                </div>
-              </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select class="form-control mt-2" id="gender">
+                <option value="0">Select gender</option>
+                <option value="1">Men</option>
+                <option value="2">Women</option>
+                <option value="-1">Uncategorized</option>
+              </select>
             </div>
           </div>
-          <br />
-          <div class="row">
-            <div class="col-md-3">
-              <div class="form-group">
-                <label for="start-time">Start from</label>
-                <select class="form-control mt-2" id="start-time" required>
-                  <option value="08:00" selected>1:00 pm</option>
-                  <option value="09:00">2:00 pm</option>
-                  <option value="10:00">3:00 pm</option>
-                  <option value="11:00">4:00 pm</option>
-                  <option value="12:00">5:00 pm</option>
-                </select>
-                <div
-                  class="error-message"
-                  id="start-time-error"
-                  style="color: red; display: none"
-                >
-                  Please select a start time
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                <label for="end-time">Finish by</label>
-                <select class="form-control mt-2" id="end-time" required>
-                  <option value="08:00">1:00 pm</option>
-                  <option value="09:00">2:00 pm</option>
-                  <option value="10:00">3:00 pm</option>
-                  <option value="11:00">4:00 pm</option>
-                  <option value="18:00" selected>11:00 pm</option>
-                </select>
-                <div
-                  class="error-message"
-                  id="end-time-error"
-                  style="color: red; display: none"
-                >
-                  Please select an end time
-                </div>
-              </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select class="form-control mt-2" id="service">
+                <option value="0">Select service</option>
+                <option value="1">Haircut</option>
+                <option value="2">Hair Coloring</option>
+                <option value="3">Manicure</option>
+                <option value="4">Pedicure</option>
+                <option value="5">Facial</option>
+              </select>
             </div>
           </div>
-          <hr />
-          <button type="button" id="nextStepButton" class="btn btn-next">
-            Next <i class="bi bi-arrow-right"></i>
-          </button>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="staff">Staff</label>
+              <select class="form-control mt-2" id="staff">
+                <option value="0">Any</option>
+                <option value="3">Faraz</option>
+                <option value="4">Ziyafat</option>
+                <option value="5">Shahbaz</option>
+                <option value="6">Suneel</option>
+                <option value="7">John</option>
+                <option value="8">Suraj</option>
+                <option value="9">Jonty</option>
+                <option value="10">Ali</option>
+              </select>
+            </div>
+          </div>
         </div>
+        <br />
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="available-date">I'm available on or after</label>
+              <input
+                type="date"
+                class="form-control mt-2"
+                id="available-date"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Available Days</label>
+              <div class="d-flex flex-wrap mt-2">
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="2"
+                    id="monday"
+                  />
+                  <label class="form-check-label" for="monday">Mon</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="3"
+                    id="tuesday"
+                  />
+                  <label class="form-check-label" for="tuesday">Tue</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="4"
+                    id="wednesday"
+                  />
+                  <label class="form-check-label" for="wednesday">Wed</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="5"
+                    id="thursday"
+                  />
+                  <label class="form-check-label" for="thursday">Thu</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="6"
+                    id="friday"
+                  />
+                  <label class="form-check-label" for="friday">Fri</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="7"
+                    id="saturday"
+                  />
+                  <label class="form-check-label" for="saturday">Sat</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="1"
+                    id="sunday"
+                  />
+                  <label class="form-check-label" for="sunday">Sun</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="start-time">Start from</label>
+              <select class="form-control mt-2" id="start-time">
+                <option value="08:00" selected>1:00 pm</option>
+                <option value="09:00">2:00 pm</option>
+                <option value="10:00">3:00 pm</option>
+                <option value="11:00">4:00 pm</option>
+                <option value="12:00">5:00 pm</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="end-time">Finish by</label>
+              <select class="form-control mt-2" id="end-time">
+                <option value="08:00">1:00 pm</option>
+                <option value="09:00">2:00 pm</option>
+                <option value="10:00">3:00 pm</option>
+                <option value="11:00">4:00 pm</option>
+                <option value="18:00" selected>11:00 pm</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <button type="submit" class="btn btn-next">
+          Next
+          <i class="bi bi-arrow-right"></i>
+        </button>
       </form>
     </div>
 
@@ -363,6 +312,330 @@
           </div>
         </div>
       </section>
+      <section class="container mt-5">
+        <div
+          class="container"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px;
+            gap: 20px;
+          "
+        >
+          <div class="content" style="max-width: 60%">
+            <p style="font-size: 20px; padding-bottom: 20px">
+              Cosmo Salon is the best salon in Lahore and offers top beauty
+              parlour services for both men and women. We’re not just a beauty
+              parlour; we’re a sanctuary dedicated to enhancing your natural
+              radiance and making you feel confident and pampered. Conveniently
+              located with four branches across Lahore, we’re here to serve you
+              better.
+            </p>
+            <h2 class="col-12 text-center fs-21 fw-bold mb-4 mt-5">
+              Four Convenient Branches
+            </h2>
+            <ul style="list-style-type: none; padding: 0">
+              <li style="margin-bottom: 10px; font-size: 18px; color: #000000">
+                <strong style="color: #000000"
+                  >COSMO Salon PIA Road (Head Office):</strong
+                >
+                Our main branch in DHA at PIA Road sets the standard for our
+                exceptional services.
+              </li>
+              <li style="margin-bottom: 10px; font-size: 18px; color: #000000">
+                <strong style="color: #000000">COSMO Salon MM Alam:</strong>
+                Located in the MM Alam Road area, it’s easily accessible for all
+                your beauty needs.
+              </li>
+              <li style="margin-bottom: 10px; font-size: 18px; color: #000000">
+                <strong style="color: #000000">COSMO Salon DHA Phase 3:</strong>
+                Serving the serene surroundings of DHA Phase 3, it brings our
+                services closer to your neighborhood.
+              </li>
+              <li style="margin-bottom: 10px; font-size: 18px; color: #000000">
+                <strong style="color: #000000">COSMO Salon DHA Phase 6:</strong>
+                Our latest branch promises the same excellence in beauty and
+                grooming.
+              </li>
+            </ul>
+            <h2 class="col-12 text-center fs-21 fw-bold mb-4 mt-5">
+              Our Services
+            </h2>
+            <p style="font-size: 18px; color: #000000">
+              At COSMO Salon and Studio, we pride ourselves on being the best
+              salon in Lahore. We offer top beauty parlour services, from spa
+              treatments to haircuts and makeup for special events. Our skilled
+              team enhances your unique style and features.
+            </p>
+            <h2 class="col-12 text-center fs-21 fw-bold mb-4 mt-5">
+              <strong>Experience the Difference of Quality Grooming</strong>
+            </h2>
+          </div>
+          <div class="image-container" style="max-width: 100%">
+            <img
+              src="Models.jpg"
+              alt="Cosmo Salon Models"
+              style="
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </div>
+        </div>
+        <div
+          class="container"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px;
+            gap: 20px;
+          "
+        >
+          <div
+            class="section"
+            style="
+              flex: 1;
+              background-color: #fff;
+              padding: 20px;
+              border: 1px solid #ddd;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h2 style="font-size: 40px; color: #fe0058; margin-top: 0">
+              COSMO Academy
+            </h2>
+            <p style="font-size: 18px; color: #000000">
+              Join the professionals from the best salon in Lahore who provide
+              informative, educational, and cutting-edge advanced training in
+              cosmetology. You will learn from experts who know the latest
+              trends and techniques in this field. You will find a course that
+              matches your interests and goals, whether you want to focus on
+              hair, skin, makeup, or nails. By joining the professionals, you
+              will improve your skills, confidence, and reputation as a
+              cosmetologist.
+            </p>
+          </div>
+          <div
+            class="section"
+            style="
+              flex: 1;
+              background-color: #fff;
+              padding: 20px;
+              border: 1px solid #ddd;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h2 style="font-size: 40px; color: #fe0058; margin-top: 0">
+              COSMO Films
+            </h2>
+            <p style="font-size: 18px; color: #000000">
+              Our team of professional photographers can capture stunning images
+              for your website, such as team photos and product photography. We
+              also offer wedding and corporate event photography services. We
+              have the skills and equipment to create high-resolution and
+              high-quality photos that showcase your brand and personality.You
+              will find a course that matches your interests and goals, whether
+              you want to focus on hair, skin, makeup, or nails.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-5">
+        <div
+          class="grid-container"
+          style="
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            margin: 20px;
+          "
+        >
+          <div
+            class="grid-item text-overlay"
+            style="
+              background-color: #122639;
+              color: white;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              padding: 20px;
+              border-radius: 4px;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)';"
+            onmouseout="this.style.transform='scale(1)';"
+          >
+            <h1 style="margin: 0; font-size: 1.8rem">Styling Inspiration</h1>
+            <hr />
+            <p>CURRENT TRENDS, STYLING TIPS AND MUCH MORE</p>
+          </div>
+
+          <!-- Images Grid -->
+          <div class="grid-item">
+            <img
+              src="./assets/images/img2.jpg"
+              alt="Styling 1"
+              style="
+                width: 95%;
+                height: 100%;
+                display: block;
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)';"
+              onmouseout="this.style.transform='scale(1)';"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="./assets/images/img3.jpg"
+              alt="Styling 1"
+              style="
+                width: 95%;
+                height: 100%;
+                display: block;
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)';"
+              onmouseout="this.style.transform='scale(1)';"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="./assets/images/img4.jpg"
+              alt="Styling 2"
+              style="
+                width: 95%;
+                height: 100%;
+                display: block;
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)';"
+              onmouseout="this.style.transform='scale(1)';"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="./assets/images/img5.jpg"
+              alt="Styling 3"
+              style="
+                width: 95%;
+                height: 100%;
+                display: block;
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)';"
+              onmouseout="this.style.transform='scale(1)';"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="./assets/images/img6.jpg"
+              alt="Styling 4"
+              style="
+                width: 95%;
+                height: 100%;
+                display: block;
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)';"
+              onmouseout="this.style.transform='scale(1)';"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="./assets/images/img7.jpg"
+              alt="Styling 5"
+              style="
+                width: 95%;
+                height: 100%;
+                display: block;
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)';"
+              onmouseout="this.style.transform='scale(1)';"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="./assets/images/img8.jpg"
+              alt="Styling 6"
+              style="
+                width: 95%;
+                height: 100%;
+                display: block;
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)';"
+              onmouseout="this.style.transform='scale(1)';"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div
+        style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center"
+      >
+        <div style="flex: 1; position: relative; color: white">
+          <img
+            src="./assets/images/img9.jpg"
+            alt="Fashion Show"
+            style="
+              width: 95%;
+              height: auto;
+              border-radius: 10px;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)';"
+            onmouseout="this.style.transform='scale(1)';"
+          />
+          <div
+            style="position: absolute; bottom: 20%; left: 10%; padding: 20px"
+          >
+            <h1 style="font-size: 2rem; margin: 0">Salon Interior</h1>
+          </div>
+        </div>
+
+        <div style="flex: 1; position: relative; color: white">
+          <img
+            src="./assets/images/img10.jpg"
+            alt="Fashion Show"
+            style="
+              width: 95%;
+              height: auto;
+              border-radius: 10px;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)';"
+            onmouseout="this.style.transform='scale(1)';"
+          />
+
+          <div
+            style="position: absolute; bottom: 20%; left: 10%; padding: 20px"
+          >
+            <h1 style="font-size: 2rem; margin: 0">
+              Book Your Appointment Online
+            </h1>
+            <p style="font-size: 1.2rem; margin: 0">
+              Save up to 20% on Today's Booking
+            </p>
+          </div>
+        </div>
+      </div>
       <section class="mt-4 News">
         <br />
         <h2 class="col-12 p-3 fs-21 fw-bold text-center">News And Articles</h2>
@@ -465,6 +738,12 @@
               <li><a href="men-deals.html">Men Deals</a></li>
               <li><a href="service-women.html">Services for Women</a></li>
               <li><a href="service-men.html">Services for Men</a></li>
+              <li><a href="care_tips.html">Skin Care Tips</a></li>
+              <li><a href="events.html">Our Events</a></li>
+              <li><a href="membership.html">Membership Plans</a></li>
+
+              <li><a href="virtual try-on.html">Virtual try-on</a></li>
+              <li><a href="Loyalty Rewards.html">Loyalty Rewards</a></li>
               <li><a href="about.html">About</a></li>
             </ul>
           </div>
