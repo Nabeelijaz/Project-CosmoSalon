@@ -18,6 +18,37 @@
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Women Deals - COSMO® Beauty Salon</title>
+
+    <style>
+      .reward-box {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+      }
+      .step-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .btn-custom {
+        background-color: #f4b838;
+        color: white;
+        padding: 12px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .btn-custom:hover {
+        background-color: #f4b838;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar">
@@ -32,7 +63,7 @@
         <i class="bi bi-calendar-week-fill" id="appointmentPopupOpen"></i>
       </div>
     </nav>
-  <header class="header position-relative">
+    <header class="header position-relative">
       <i class="arrow left bi bi-chevron-left"></i>
       <div class="imgslider"></div>
       <div class="swiper-slide-contents">
@@ -61,7 +92,7 @@
     <div id="appointmentPopup">
       <i class="bi bi-x" id="appointmentPopupClose"></i>
       <div class="text-center mb-4">
-        <h3 class="fw-bold">Book your appointment now</h3>
+        <h2 class="fw-bold">Book your appointment now</h2>
       </div>
       <div class="progress mb-4 gap-1">
         <div class="progress-bar isactive">1. Services</div>
@@ -245,37 +276,49 @@
     </div>
 
     <main>
-        <body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+      <!-- Header Section -->
+      <div class="text-center py-4">
+        <h1 class="fw-bold">Loyalty Rewards</h1>
+        <p class="fs-5">Earn points and unlock amazing benefits!</p>
+      </div>
 
-            <div style="text-align: center; padding: 20px;  color: #fe0058;">
-              <h1 style="font-family: Arial, sans-serif;"><strong>Loyalty Rewards</strong></h1>
-              <p>Earn points and unlock amazing benefits!</p>
-            </div>
-          
-            <div style="max-width: 900px; margin: 20px auto; padding: 20px; text-align: center; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-              <h2 style="font-family: Arial, sans-serif;">How It Works</h2>
-              <p style="font-family: Arial, sans-serif;">Join our loyalty program and earn points for every service. Redeem points for free services or discounts.</p>
-          
-              <div style="display: flex; justify-content: space-between; margin: 20px 0; flex-wrap: wrap;">
-                <div style="flex: 1; margin: 10px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
-                  <h3 style="font-family: Arial, sans-serif;">Step 1</h3>
-                  <p>Sign up for our loyalty program in the salon or online.</p>
-                </div>
-                <div style="flex: 1; margin: 10px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
-                  <h3 style="font-family: Arial, sans-serif;">Step 2</h3>
-                  <p>Earn points for every service you enjoy.</p>
-                </div>
-                <div style="flex: 1; margin: 10px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
-                  <h3 style="font-family: Arial, sans-serif;">Step 3</h3>
-                  <p>Redeem your points for exclusive rewards.</p>
-                </div>
+      <!-- Main Content -->
+      <div class="container">
+        <div class="reward-box mx-auto text-center" style="max-width: 900px">
+          <h2 class="text-dark">How It Works</h2>
+          <p class="text-muted fs-5">
+            Join our loyalty program and earn points for every service. Redeem
+            points for free services or discounts.
+          </p>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="step-card">
+                <h3 class="">Step 1</h3>
+                <p>Sign up for our loyalty program in the salon or online.</p>
               </div>
-          
-              <button style="background-color: #fe0058; color: white; border: none; padding: 10px 20px; font-size: 1rem; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;" onclick="joinLoyaltyProgram()">Join Now</button>
             </div>
+            <div class="col-md-4">
+              <div class="step-card">
+                <h3 class="">Step 2</h3>
+                <p>Earn points for every service you enjoy.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="step-card">
+                <h3 class="">Step 3</h3>
+                <p>Redeem your points for exclusive rewards.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-custom mt-4">Join Now</button>
+        </div>
+      </div>
+
       <hr />
     </main>
-     <footer class="footer text-white py-4 mt-2" style="background-color: #000">
+    <footer class="footer text-white py-4 mt-2" style="background-color: #000">
       <div class="container mt-5">
         <div class="row">
           <div class="col-md-3">
