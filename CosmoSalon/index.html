@@ -34,7 +34,7 @@
       </div>
     </nav>
 
-    <header class="header position-relative">
+    <header class="header">
       <i class="arrow left bi bi-chevron-left"></i>
       <div class="imgslider"></div>
       <div class="swiper-slide-contents">
@@ -61,10 +61,189 @@
     </div>
     <!-- Appointment Popup -->
     <div id="appointmentPopup">
-      <button id="appointmentPopupClose">Close</button>
-      <h2>Book your appointment</h2>
-      <!-- Content of the Appointment form goes here -->
-      <p>Appointment form content...</p>
+      <i class="bi bi-x" id="appointmentPopupClose"></i>
+      <div class="text-center mb-4">
+        <h3 class="fw-bold">Book your appointment now</h3>
+      </div>
+      <div class="progress mb-4 gap-1">
+        <div class="progress-bar isactive">1. Services</div>
+        <div class="progress-bar">2. Cart</div>
+        <div class="progress-bar">3. Personal Details</div>
+        <div class="progress-bar">4. Payment</div>
+        <div class="progress-bar">5. Done</div>
+      </div>
+      <h6>Please select service:</h6>
+      <form>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="location">Location</label>
+              <select class="form-control mt-2" id="location">
+                <option value="0">Select location</option>
+                <option value="1">Cosmo Salon MM Alam</option>
+                <option value="2">Cosmo Salon PIA</option>
+                <option value="3">Cosmo Salon Iqbal Town</option>
+                <option value="4">Cosmo Salon Dha Phase 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select class="form-control mt-2" id="gender">
+                <option value="0">Select gender</option>
+                <option value="1">Men</option>
+                <option value="2">Women</option>
+                <option value="-1">Uncategorized</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select class="form-control mt-2" id="service">
+                <option value="0">Select service</option>
+                <option value="1">Haircut</option>
+                <option value="2">Hair Coloring</option>
+                <option value="3">Manicure</option>
+                <option value="4">Pedicure</option>
+                <option value="5">Facial</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="staff">Staff</label>
+              <select class="form-control mt-2" id="staff">
+                <option value="0">Any</option>
+                <option value="3">Faraz</option>
+                <option value="4">Ziyafat</option>
+                <option value="5">Shahbaz</option>
+                <option value="6">Suneel</option>
+                <option value="7">John</option>
+                <option value="8">Suraj</option>
+                <option value="9">Jonty</option>
+                <option value="10">Ali</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="available-date">I'm available on or after</label>
+              <input
+                type="date"
+                class="form-control mt-2"
+                id="available-date"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Available Days</label>
+              <div class="d-flex flex-wrap mt-2">
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="2"
+                    id="monday"
+                  />
+                  <label class="form-check-label" for="monday">Mon</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="3"
+                    id="tuesday"
+                  />
+                  <label class="form-check-label" for="tuesday">Tue</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="4"
+                    id="wednesday"
+                  />
+                  <label class="form-check-label" for="wednesday">Wed</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="5"
+                    id="thursday"
+                  />
+                  <label class="form-check-label" for="thursday">Thu</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="6"
+                    id="friday"
+                  />
+                  <label class="form-check-label" for="friday">Fri</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="7"
+                    id="saturday"
+                  />
+                  <label class="form-check-label" for="saturday">Sat</label>
+                </div>
+                <div class="form-check me-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="1"
+                    id="sunday"
+                  />
+                  <label class="form-check-label" for="sunday">Sun</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="start-time">Start from</label>
+              <select class="form-control mt-2" id="start-time">
+                <option value="08:00" selected>1:00 pm</option>
+                <option value="09:00">2:00 pm</option>
+                <option value="10:00">3:00 pm</option>
+                <option value="11:00">4:00 pm</option>
+                <option value="12:00">5:00 pm</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="end-time">Finish by</label>
+              <select class="form-control mt-2" id="end-time">
+                <option value="08:00">1:00 pm</option>
+                <option value="09:00">2:00 pm</option>
+                <option value="10:00">3:00 pm</option>
+                <option value="11:00">4:00 pm</option>
+                <option value="18:00" selected>11:00 pm</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <button type="submit" class="btn btn-next">
+          Next
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
     </div>
 
     <main>
@@ -207,31 +386,38 @@
           </div>
         </div>
 
-        <div class="container additional-sections">
-          <div class="section academy">
-            <h2 class="academy-title">COSMO Academy</h2>
-            <hr />
-            <p class="academy-text">
-              Join the professionals from the best salon in Lahore who provide
-              informative, educational, and cutting-edge advanced training in
-              cosmetology. You will learn from experts who know the latest
-              trends and techniques in this field. You will find a course that
-              matches your interests and goals, whether you want to focus on
-              hair, skin, makeup, or nails. By joining the professionals, you
-              will improve your skills, confidence, and reputation as a
-              cosmetologist.
-            </p>
-          </div>
-          <div class="section films">
-            <h2 class="films-title">COSMO Films</h2>
-            <hr />
-            <p class="films-text">
-              Our team of professional photographers can capture stunning images
-              for your website, such as team photos and product photography. We
-              also offer wedding and corporate event photography services. We
-              have the skills and equipment to create high-resolution and
-              high-quality photos that showcase your brand and personality.
-            </p>
+        <div class="container-fluid px-5">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="section academy p-3">
+                <h2 class="academy-title">COSMO Academy</h2>
+                <hr />
+                <p class="academy-text">
+                  Join the professionals from the best salon in Lahore who
+                  provide informative, educational, and cutting-edge advanced
+                  training in cosmetology. You will learn from experts who know
+                  the latest trends and techniques in this field. You will find
+                  a course that matches your interests and goals, whether you
+                  want to focus on hair, skin, makeup, or nails. By joining the
+                  professionals, you will improve your skills, confidence, and
+                  reputation as a cosmetologist.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="section films p-3">
+                <h2 class="films-title">COSMO Films</h2>
+                <hr />
+                <p class="films-text">
+                  Our team of professional photographers can capture stunning
+                  images for your website, such as team photos and product
+                  photography. We also offer wedding and corporate event
+                  photography services. We have the skills and equipment to
+                  create high-resolution and high-quality photos that showcase
+                  your brand and personality.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

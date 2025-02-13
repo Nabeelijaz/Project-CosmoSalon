@@ -6,7 +6,6 @@
   --box-shadow-color: rgba(0, 0, 0, 0.6);
   --progress-color: #bec3c7;
   --dark-color: rgba(0, 0, 0, 0.69);
-  --heading-color: #fe0058;
 }
 
 * {
@@ -55,7 +54,6 @@ h2 {
   }
 }
 
-
 .logo {
   font-size: 30px;
   font-weight: bold;
@@ -82,17 +80,17 @@ h2 {
   color: var(--main-color);
 }
 
-
-
 .header {
   position: relative;
   background-color: var(--primary-color);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   overflow: hidden;
-  z  z-index: 1; 
+  z-index: 1;
+  padding-top: 50px; /* 🔹 Top se 50px ka gap */
 }
 
 .header .imgslider {
@@ -102,7 +100,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
- 
+  margin-top: 20px; /* 🔹 Image ko thoda neeche shift */
 }
 
 .arrow {
@@ -168,8 +166,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-
-.elementor-button,.elementor-button1  {
+.elementor-button,
+.elementor-button1 {
   background-color: transparent;
   color: white;
   padding: 12px 24px;
@@ -194,22 +192,19 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 .elementor-heading-title {
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
-  margin-right: 40px; 
+  margin-right: 40px;
   text-align: center;
 }
 
-
-
 .elementor-button1:hover {
-  background-color:#ffffff;
-  
+  background-color: #ffffff;
 }
 .background-div {
   position: relative;
@@ -225,12 +220,14 @@ h2 {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out; /* Smooth effect */}
+  transition: transform 0.3s ease-in-out; /* Smooth effect */
+}
 
 /* Common background styling */
 .background-div {
   position: relative;
   margin: 10px;
+  padding: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -242,9 +239,7 @@ h2 {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-
 }
-
 
 /* Background overlay */
 .background-div::after {
@@ -272,16 +267,34 @@ h2 {
 }
 
 /* Individual background images */
-.background-div1 { background-image: url("../images/SkinCare.jpg"); }
-.background-div2 { background-image: url("../images/Hair.jpg"); }
-.background-div3 { background-image: url("../images/Makeup.jpg"); }
-.background-div4 { background-image: url("../images/Photography.jpg"); }
-.background-div5 { background-image: url("../images/Spa.jpg"); }
+.background-div1 {
+  background-image: url("../images/SkinCare.jpg");
+}
+.background-div2 {
+  background-image: url("../images/Hair.jpg");
+}
+.background-div3 {
+  background-image: url("../images/Makeup.jpg");
+}
+.background-div4 {
+  background-image: url("../images/Photography.jpg");
+}
+.background-div5 {
+  background-image: url("../images/Spa.jpg");
+}
 
-.background-div6 { background-image: url("../images/MenSkinCare.jpg"); }
-.background-div7 { background-image: url("../images/MenHair.jpg"); }
-.background-div8 { background-image: url("../images/MenMakeup.jpg"); }
-.background-div9 { background-image: url("../images/MenPhotography.jpg"); }
+.background-div6 {
+  background-image: url("../images/MenSkinCare.jpg");
+}
+.background-div7 {
+  background-image: url("../images/MenHair.jpg");
+}
+.background-div8 {
+  background-image: url("../images/MenMakeup.jpg");
+}
+.background-div9 {
+  background-image: url("../images/MenPhotography.jpg");
+}
 
 /* Responsive Layout */
 
@@ -298,13 +311,10 @@ h2 {
   }
 }
 
-
-
 .main {
   margin: 20px;
   padding: 20px;
 }
-
 
 #appointmentPopup {
   display: none;
@@ -327,7 +337,7 @@ h2 {
 }
 
 label {
-  color: var(--heading-color);
+  color: var(--main-color);
   font-weight: bold;
 }
 
@@ -343,7 +353,6 @@ a {
   color: var(--main-color);
 } */
 
-
 .btn-next {
   float: right;
   background-color: var(--main-color);
@@ -353,7 +362,7 @@ a {
 }
 
 .btn-next:hover {
-  background-color: var(--heading-color);
+  background-color: var(--main-color);
   color: var(--secondary-color);
   font-weight: bold;
 }
@@ -363,21 +372,19 @@ a {
   background-color: var(--progress-color);
 }
 .isactive {
-  background-color: var(--heading-color);
+  background-color: var(--main-color);
 }
-
-
 
 /* Section Container */
 .section-container {
   margin-top: 5rem;
 }
-
 /* Content container */
 .content-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
   margin: 20px;
   gap: 20px;
   padding: 20px 25px;
@@ -385,8 +392,9 @@ a {
 
 /* Content */
 .content {
+  flex: 1; /* Allows flexible width */
+  min-width: 280px; /* Ensures it doesn't get too small */
   max-width: 45%;
- 
 }
 
 .content-text {
@@ -398,7 +406,6 @@ a {
   font-size: 25px;
   margin-top: 1rem;
   margin-bottom: 1rem;
-
 }
 
 /* List of Branches */
@@ -415,33 +422,48 @@ a {
 
 /* Image Container */
 .image-container {
-  width: 100%;
+  flex: 1; /* Allows flexible width */
+  min-width: 280px;
+  max-width: 45%;
 }
 
 .image {
   width: 100%;
-  height: 100%;
+  height: auto; /* Maintains aspect ratio */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Additional Sections */
-.additional-sections {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
-  gap: 20px;
-  
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: center;
+  }
+
+  .content,
+  .image-container {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .section-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .content-text {
+    font-size: 14px;
+  }
 }
 
 /* Individual Section */
 .section {
   padding: 20px;
-
 }
 
 /* COSMO Academy */
-.academy-title,.films-title {
+.academy-title,
+.films-title {
   font-size: 25px;
   color: black;
   margin-top: 0;
@@ -453,7 +475,6 @@ a {
 }
 
 /* COSMO Films */
- 
 
 .films-text {
   font-size: 16px;
@@ -497,9 +518,6 @@ footer p:hover {
   }
 }
 
-
-
-
 /* Grid Container */
 .grid-container {
   display: grid;
@@ -514,7 +532,6 @@ footer p:hover {
   position: relative;
   overflow: hidden;
 }
-
 
 /* Grid Item */
 .grid-item1 {
@@ -564,10 +581,8 @@ footer p:hover {
 }
 .grid-item:hover .text-overlay {
   opacity: 1;
-  animation: slideRight 1.0s ease-in-out forwards;
+  animation: slideRight 1s ease-in-out forwards;
 }
-
-
 
 @keyframes slideRight {
   0% {
@@ -654,40 +669,76 @@ footer p:hover {
   }
 }
 
-
-
 @media (max-width: 768px) {
   .News {
     display: none;
   }
 
- 
-    .contact,.map {
-      display: none; /* Ensure visible on small screens */
-    }
-  
-  
-    .footer .row {
-      text-align: center; /* Footer ka sara text center me dikhayega */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .footer .col-md-3 {
-      width: 100%; /* Columns ko full width par laayega */
-      margin-bottom: 20px; /* Space add karega */
-    }
-    .footer h5 {
-      text-align: center; /* Headings ko bhi center me karega */
-    }
-    .footer .list-unstyled {
-      padding-left: 0; /* List ke left spacing ko remove karega */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .footer p {
-      text-align: center; /* Paragraphs ko center karega */
-    }
+  .contact,
+  .map {
+    display: none; /* Ensure visible on small screens */
   }
-  
+
+  .footer .row {
+    text-align: center; /* Footer ka sara text center me dikhayega */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .col-md-3 {
+    width: 100%; /* Columns ko full width par laayega */
+    margin-bottom: 20px; /* Space add karega */
+  }
+  .footer h5 {
+    text-align: center; /* Headings ko bhi center me karega */
+  }
+  .footer .list-unstyled {
+    padding-left: 0; /* List ke left spacing ko remove karega */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer p {
+    text-align: center; /* Paragraphs ko center karega */
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+  .header {
+    padding-top: 40px;
+  }
+
+  .header .imgslider {
+    height: 500px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 30px;
+  }
+
+  .header .imgslider {
+    height: 400px;
+    margin-top: 10px;
+  }
+  .elementor-slide-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding-top: 20px;
+  }
+
+  .header .imgslider {
+    height: 300px;
+    margin-top: 5px;
+  }
+  .elementor-slide-heading {
+    font-size: 30px;
+  }
+}
