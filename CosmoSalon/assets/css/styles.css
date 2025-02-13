@@ -21,17 +21,17 @@ h2 {
 }
 
 .fs-15 {
-  font-size: 28px; /* Updated font size */
+  font-size: 28px;
 }
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Puri width */
-  height: 80px; /* Navbar height increase ki gayi */
+  width: 100%;
+  height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Left-Right alignment */
+  justify-content: space-between;
   padding: 25px 100px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -39,17 +39,16 @@ h2 {
   z-index: 1000;
 }
 
-/* Responsive Adjustment */
 @media (max-width: 768px) {
   .navbar {
-    height: 70px; /* Tablet ke liye height adjust */
+    height: 70px;
     padding: 15px 20px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar {
-    height: 60px; /* Mobile screens ke liye height choti */
+    height: 60px;
     padding: 10px 15px;
   }
 }
@@ -90,7 +89,7 @@ h2 {
   width: 100%;
   overflow: hidden;
   z-index: 1;
-  padding-top: 50px; /* 🔹 Top se 50px ka gap */
+  padding-top: 50px;
 }
 
 .header .imgslider {
@@ -100,7 +99,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 20px; /* 🔹 Image ko thoda neeche shift */
+  margin-top: 20px;
 }
 
 .arrow {
@@ -212,7 +211,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px; /* Default height */
+  height: 300px;
   border-radius: 10px;
   font-family: "Volkhov", Sans-serif;
   display: flex;
@@ -220,10 +219,9 @@ h2 {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out; /* Smooth effect */
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Common background styling */
 .background-div {
   position: relative;
   margin: 10px;
@@ -241,7 +239,6 @@ h2 {
   overflow: hidden;
 }
 
-/* Background overlay */
 .background-div::after {
   content: "";
   position: absolute;
@@ -249,24 +246,21 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Ensure text stays on top */
 .background-div h5 {
   position: relative;
   z-index: 1;
 }
 
-/* Hover effect */
 .background-div:hover::after {
-  background-color: rgba(0, 0, 0, 0.2); /* Lighter overlay on hover */
+  background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Individual background images */
 .background-div1 {
   background-image: url("../images/SkinCare.jpg");
 }
@@ -295,8 +289,6 @@ h2 {
 .background-div9 {
   background-image: url("../images/MenPhotography.jpg");
 }
-
-/* Responsive Layout */
 
 @media (min-width: 1200px) {
   .background-div {
@@ -348,10 +340,6 @@ a {
 .News {
   background-color: #383131;
 }
-/* a:hover {
-  text-decoration: underline;
-  color: var(--main-color);
-} */
 
 .btn-next {
   float: right;
@@ -375,25 +363,23 @@ a {
   background-color: var(--main-color);
 }
 
-/* Section Container */
 .section-container {
   margin-top: 5rem;
 }
-/* Content container */
+
 .content-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+  flex-wrap: wrap;
   margin: 20px;
   gap: 20px;
   padding: 20px 25px;
 }
 
-/* Content */
 .content {
-  flex: 1; /* Allows flexible width */
-  min-width: 280px; /* Ensures it doesn't get too small */
+  flex: 1;
+  min-width: 280px;
   max-width: 45%;
 }
 
@@ -408,7 +394,6 @@ a {
   margin-bottom: 1rem;
 }
 
-/* List of Branches */
 .branches-list {
   list-style-type: none;
   padding: 0;
@@ -420,30 +405,28 @@ a {
   color: #000;
 }
 
-/* Image Container */
 .image-container {
-  flex: 1; /* Allows flexible width */
+  flex: 1;
   min-width: 280px;
   max-width: 45%;
 }
 
 .image {
   width: 100%;
-  height: auto; /* Maintains aspect ratio */
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .content-container {
-    flex-direction: column; /* Stack elements on smaller screens */
+    flex-direction: column;
     align-items: center;
   }
 
   .content,
   .image-container {
-    max-width: 100%; /* Full width on smaller screens */
+    max-width: 100%;
   }
 
   .section-title {
@@ -456,12 +439,10 @@ a {
   }
 }
 
-/* Individual Section */
 .section {
   padding: 20px;
 }
 
-/* COSMO Academy */
 .academy-title,
 .films-title {
   font-size: 25px;
@@ -474,14 +455,11 @@ a {
   color: #000;
 }
 
-/* COSMO Films */
-
 .films-text {
   font-size: 16px;
   color: #000;
 }
 
-/* Footer styling */
 .footer {
   background-color: #000;
   color: white;
@@ -503,29 +481,25 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-  color: #f4b838; /* Hover effect for links */
+  color: #f4b838;
 }
 
-/* Hover effect for paragraphs in footer */
 footer p:hover {
   color: #f4b838;
 }
 
-/* Responsiveness */
 @media (max-width: 768px) {
   footer .col-md-3 {
     margin-bottom: 20px;
   }
 }
 
-/* Grid Container */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
 }
 
-/* Grid Item */
 .grid-item {
   margin: 0;
   padding: 0;
@@ -533,7 +507,6 @@ footer p:hover {
   overflow: hidden;
 }
 
-/* Grid Item */
 .grid-item1 {
   position: relative;
   overflow: hidden;
@@ -554,31 +527,30 @@ footer p:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Grid Item Hover Effect */
 .grid-item:hover img {
   transform: scale(1.1);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Text Overlay */
 .text-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Full height */
+  height: 100%;
   background: rgba(0, 0, 0, 0.7);
   color: white;
   display: flex;
-  flex-direction: column; /* Stack elements */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  transform: translateX(-100px); /* Start from left */
+  transform: translateX(-100px);
   padding: 15px;
 }
+
 .grid-item:hover .text-overlay {
   opacity: 1;
   animation: slideRight 1s ease-in-out forwards;
@@ -595,7 +567,6 @@ footer p:hover {
   }
 }
 
-/* Text Styling */
 .text-overlay h1 {
   font-size: 1.5rem;
   margin: 0;
@@ -606,14 +577,12 @@ footer p:hover {
   margin-top: 5px;
 }
 
-/* Flex Container */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0px;
 }
 
-/* Flex Items */
 .flex-item {
   flex: 1;
   position: relative;
@@ -631,7 +600,6 @@ footer p:hover {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Overlay Text */
 .overlay-text {
   position: absolute;
   bottom: 20%;
@@ -652,7 +620,6 @@ footer p:hover {
   margin-top: 5px;
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
@@ -676,34 +643,33 @@ footer p:hover {
 
   .contact,
   .map {
-    display: none; /* Ensure visible on small screens */
+    display: none;
   }
 
   .footer .row {
-    text-align: center; /* Footer ka sara text center me dikhayega */
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .footer .col-md-3 {
-    width: 100%; /* Columns ko full width par laayega */
-    margin-bottom: 20px; /* Space add karega */
+    width: 100%;
+    margin-bottom: 20px;
   }
   .footer h5 {
-    text-align: center; /* Headings ko bhi center me karega */
+    text-align: center;
   }
   .footer .list-unstyled {
-    padding-left: 0; /* List ke left spacing ko remove karega */
+    padding-left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .footer p {
-    text-align: center; /* Paragraphs ko center karega */
+    text-align: center;
   }
 }
 
-/* Responsive Fixes */
 @media (max-width: 1024px) {
   .header {
     padding-top: 40px;
