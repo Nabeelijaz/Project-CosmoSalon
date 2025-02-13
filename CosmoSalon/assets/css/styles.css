@@ -20,6 +20,15 @@ h2 {
   font-family: "Work Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #f4b838;
+}
+
 .fs-15 {
   font-size: 28px;
 }
@@ -636,7 +645,7 @@ footer p:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
   .News {
     display: none;
   }
@@ -708,19 +717,18 @@ footer p:hover {
     font-size: 30px;
   }
 }
-
+/* Sidebar container styling */
 .sidebar {
   position: fixed;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100vh;
-  background-color: #333;
+  background-color: #000000;
   color: white;
-  padding: 100px;
+  padding: 10px;
   overflow-y: auto;
   transition: left 0.3s ease-in-out;
-  padding: 10px;
   z-index: 1000;
   font-family: "Volkhov", Sans-serif;
   font-size: 20px;
@@ -728,6 +736,18 @@ footer p:hover {
 
 .sidebar.active {
   left: 0;
+}
+
+.sidebar i {
+  color: #f4b838;
+  margin-right: 8px;
+  font-size: 1.4rem;
+}
+.sidebar p {
+  display: flex;
+  font-weight: 700;
+  font-family: "Volkhov", Sans-serif;
+  font-size: 20px;
 }
 
 .close-btn {
@@ -765,10 +785,4 @@ footer p:hover {
 
 .list-unstyled li {
   margin-bottom: 10px;
-}
-
-.fa-map-marker-alt,
-.fa-phone,
-.fa-clock {
-  margin-right: 10px;
 }

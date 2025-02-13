@@ -3,36 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COSMO® - Best Salon In Lahore, Beauty Parlour For Men & Women</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
     <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <!-- Include Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>COSMO® - Best Salon In Lahore, Beauty Parlour For Men & Women</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
-      <div>
-        <!-- <a href="./index.html">
-          <img src="./assets/images/logo.png" alt="Cosmo Salon Logo" />
-        </a> -->
-        <a href="index.html"><h1 class="logo">COSMO SALON</h1></a>
+      <div class="logo-container">
+        <a href="index.html">
+          <img
+            src="https://cosmosalon.pk/wp-content/uploads/2023/05/logo-with-drop.png"
+            alt="COSMO SALON"
+            class="logo"
+          />
+        </a>
       </div>
+
       <div class="menu-icon">
-        <i class="bi bi-border-width" id="sidebarOpen"></i>
+        <i class="bi bi-border-width" id="openSidebar"></i>
         <i class="bi bi-calendar-week-fill" id="appointmentPopupOpen"></i>
       </div>
     </nav>
-    <header class="header position-relative">
+
+    <!-- Header  -->
+    <header class="header">
       <i class="arrow left bi bi-chevron-left"></i>
       <div class="imgslider"></div>
       <div class="swiper-slide-contents">
@@ -61,7 +70,7 @@
     <div id="appointmentPopup">
       <i class="bi bi-x" id="appointmentPopupClose"></i>
       <div class="text-center mb-4">
-        <h2 class="fw-bold">Book your appointment now</h2>
+        <h3 class="fw-bold">Book your appointment now</h3>
       </div>
       <div class="progress mb-4 gap-1">
         <div class="progress-bar isactive">1. Services</div>
@@ -244,8 +253,95 @@
       </form>
     </div>
 
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <button class="close-btn" id="closeSidebar">&times;</button>
+
+      <div
+        class="row d-flex justify-content-center align-items-center"
+        style="padding-left: 100px; padding-right: 100px"
+      >
+        <!-- Contact Details (Only for Desktop) -->
+        <div class="col-md-6 contact py-5" style="padding-left: 100px">
+          <div class="row">
+            <div class="contact col-md-6">
+              <p>
+                <i class="bi bi-geo-alt-fill"></i>Defence J Block Johar Town,
+                Lahore
+              </p>
+              <p><i class="bi bi-telephone-fill"></i>Men: 03214721770</p>
+              <p><i class="bi bi-telephone-fill"></i>Women: 03224053924</p>
+            </div>
+            <div class="contact col-md-6">
+              <p>
+                <i class="bi bi-geo-alt-fill"></i>Johar Town PIA Road Branch,
+                Lahore
+              </p>
+              <p><i class="bi bi-telephone-fill"></i>Men: 03211681372</p>
+              <p><i class="bi bi-telephone-fill"></i>Women: 03204309244</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="contact col-md-6">
+              <p>
+                <i class="bi bi-geo-alt-fill"></i>28-B, Block, C/II MM Alam Rd,
+                Gulberg III, Lahore
+              </p>
+              <p>
+                <i class="bi bi-telephone-fill"></i>Men / Women: 03204104466
+              </p>
+            </div>
+            <div class="contact col-md-6">
+              <p>
+                <i class="bi bi-geo-alt-fill"></i>Cosmo Salon, 3, Chenab Block,
+                Allama Iqbal Town, Lahore
+              </p>
+              <p><i class="bi bi-telephone-fill"></i>Women: 03279401297</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="contact col-md-6">
+              <p>
+                <i class="bi bi-telephone-fill"></i>Call Us for Appointment:
+                03450084262
+              </p>
+            </div>
+            <div class="contact col-md-6">
+              <p>
+                <i class="bi bi-clock"></i>Salon Opening Hours:<br />Men: 10AM -
+                1AM<br />Women: 10AM - 8PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu (Visible Always) -->
+        <div class="col-md-6">
+          <ul class="list-unstyled text-center py-5">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="women-deals.html">Women Deals</a></li>
+            <li><a href="men-deals.html">Men Deals</a></li>
+            <li><a href="service-women.html">Services for Women</a></li>
+            <li><a href="service-men.html">Services for Men</a></li>
+            <li><a href="care_tips.html">Skin Care Tips</a></li>
+            <li><a href="virtual try-on.html">Virtual try-on</a></li>
+            <li><a href="Loyalty Rewards.html">Loyalty Rewards</a></li>
+            <li><a href="membership.html">Membership Plans</a></li>
+            <li><a href="events.html">Our Events</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
     <main></main>
 
+    <!-- Footer -->
     <footer class="footer text-white py-4 mt-2" style="background-color: #000">
       <div class="container mt-5">
         <div class="row">
@@ -258,10 +354,11 @@
               <li><a href="service-women.html">Services for Women</a></li>
               <li><a href="service-men.html">Services for Men</a></li>
               <li><a href="about.html">About</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
           </div>
 
-          <div class="col-md-3">
+          <div class="contact col-md-3">
             <h5 class="footer-title">Contact</h5>
             <p>Defence J Block , Lahore</p>
             <hr />
@@ -285,7 +382,7 @@
             </ul>
           </div>
 
-          <div class="col-md-3">
+          <div class="map col-md-3">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.8768465162775!2d74.2788451!3d31.4450572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919016d1849a99f%3A0x475fb7b5e9b2342d!2sCOSMO%20SALON!5e0!3m2!1sen!2s!4v1737038976512!5m2!1sen!2s"
               width="100%"
