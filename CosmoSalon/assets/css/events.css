@@ -1,73 +1,73 @@
 /* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  text-align: center;
 }
 
 /* Header Styling */
 header {
-    background-color: #d63384;
-    color: white;
-    padding: 20px;
+  background-color: #f4b838;
+  color: white;
+  padding: 20px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 28px;
+  margin: 0;
+  font-size: 28px;
 }
 
 header p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 /* Event Section Styling */
 .events {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
 }
 
 .event {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .event:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .event img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .event h2 {
-    color: #d63384;
-    font-size: 22px;
+  color: #f4b838;
+  font-size: 22px;
 }
 
 .event p {
-    color: #555;
-    font-size: 16px;
+  color: #555;
+  font-size: 16px;
 }
 
 /* Footer Styling */
 footer {
-    background-color: #d63384;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+  background-color: #f4b838;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
 }
