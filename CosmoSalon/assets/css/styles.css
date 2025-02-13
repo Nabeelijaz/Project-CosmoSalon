@@ -25,14 +25,36 @@ h2 {
   font-size: 28px; /* Updated font size */
 }
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Puri width */
+  height: 80px; /* Navbar height increase ki gayi */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between; /* Left-Right alignment */
+  padding: 25px 100px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: 25px 100px;
-  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px; /* Tablet ke liye height adjust */
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 60px; /* Mobile screens ke liye height choti */
+    padding: 10px 15px;
+  }
+}
+
 
 .logo {
   font-size: 30px;
@@ -60,13 +82,17 @@ h2 {
   color: var(--main-color);
 }
 
+
+
 .header {
   position: relative;
   background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
- z
+  width: 100%;
+  overflow: hidden;
+  z  z-index: 1; 
 }
 
 .header .imgslider {
@@ -185,6 +211,21 @@ h2 {
   background-color:#ffffff;
   
 }
+.background-div {
+  position: relative;
+  margin: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px; /* Default height */
+  border-radius: 10px;
+  font-family: "Volkhov", Sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Smooth effect */}
 
 /* Common background styling */
 .background-div {
@@ -203,6 +244,7 @@ h2 {
   overflow: hidden;
 
 }
+
 
 /* Background overlay */
 .background-div::after {
@@ -611,3 +653,41 @@ footer p:hover {
     flex-direction: column;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .News {
+    display: none;
+  }
+
+ 
+    .contact,.map {
+      display: none; /* Ensure visible on small screens */
+    }
+  
+  
+    .footer .row {
+      text-align: center; /* Footer ka sara text center me dikhayega */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer .col-md-3 {
+      width: 100%; /* Columns ko full width par laayega */
+      margin-bottom: 20px; /* Space add karega */
+    }
+    .footer h5 {
+      text-align: center; /* Headings ko bhi center me karega */
+    }
+    .footer .list-unstyled {
+      padding-left: 0; /* List ke left spacing ko remove karega */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer p {
+      text-align: center; /* Paragraphs ko center karega */
+    }
+  }
+  
